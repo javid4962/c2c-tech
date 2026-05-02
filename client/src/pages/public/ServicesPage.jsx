@@ -15,10 +15,10 @@ import staffingImage from "../../assets/illustrations/staffing.svg";
 
 const serviceCategories = [
   {
-    title: "EduTech",
+    title: "IT Training & Placement",
     image: eduTechImage,
-    description: "Launch course catalogs, learner dashboards, assessments, certificates, and cohort experiences.",
-    highlights: ["Learning Paths", "Dashboards", "Assessments", "Certificates"],
+    description: "Build job-ready IT capability with practical training, projects, interview preparation, and placement support.",
+    highlights: ["Role-Based Training", "Live Projects", "Interview Prep", "Placement Support"],
   },
   {
     title: "Digital Marketing",
@@ -27,16 +27,16 @@ const serviceCategories = [
     highlights: ["SEO", "Paid Media", "Content", "Analytics"],
   },
   {
-    title: "IT Services",
-    image: itServicesImage,
-    description: "Modernize applications, cloud operations, data platforms, automation, security, and support.",
-    highlights: ["App Development", "Cloud", "Data and AI", "Managed IT"],
+    title: "IT Staffing",
+    image: staffingImage,
+    description: "Scale delivery teams with screened IT talent across contract, contract-to-hire, and permanent hiring.",
+    highlights: ["Contract Talent", "Permanent Hiring", "Screening", "Managed Teams"],
   },
   {
-    title: "Staffing",
-    image: staffingImage,
-    description: "Scale teams with IT and non-IT talent across contract, permanent, and managed hiring models.",
-    highlights: ["Contract Talent", "Permanent Hiring", "Screening", "Managed Teams"],
+    title: "IT Product Development",
+    image: itServicesImage,
+    description: "Design, build, and launch reliable web apps, portals, APIs, dashboards, and digital products.",
+    highlights: ["Web Apps", "Portals", "APIs", "Dashboards"],
   },
 ];
 
@@ -55,14 +55,14 @@ const ServicesPage = () => {
     <>
       <SEO
         title={`Services | ${settings?.companyName}`}
-        description={`Discover ${settings?.companyName || "enterprise"} services across EduTech, digital marketing, IT services, and staffing.`}
+        description={`Discover ${settings?.companyName || "enterprise"} services across IT training and placement, digital marketing, IT staffing, and IT product development.`}
       />
       <section className="section-space">
         <div className="page-shell">
           <SectionHeading
-            eyebrow="Services"
-            title="Four focused practices for growth, learning, technology, and workforce scale."
-            description="Each practice works independently or combines into a complete execution program across EduTech, digital marketing, IT services, and staffing."
+            eyebrow="Our Services"
+            title="Training, marketing, staffing, and product development built for practical growth."
+            description="Each practice works independently or combines into a complete execution program across IT Training & Placement, Digital Marketing, IT Staffing, and IT Product Development."
           />
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -102,26 +102,26 @@ const ServicesPage = () => {
           <div className="mt-14">
             <SectionHeading
               eyebrow="Reference-backed capabilities"
-              title="What modern EduTech, marketing, IT, and staffing buyers expect"
-              description="Based on patterns from leading category sites: clear role paths, campaign measurement, cloud/data modernization, flexible staffing, rich proof, and fast conversion paths."
+              title="What modern training, marketing, staffing, and product buyers expect"
+              description="Based on patterns from leading category sites: job-ready learning paths, measurable campaign operations, flexible IT staffing, product delivery discipline, rich proof, and fast conversion paths."
             />
             <div className="mt-10 grid gap-6 lg:grid-cols-3">
               {[
                 {
-                  title: "EduTech Learning Journeys",
-                  body: "Role-based course paths, learner dashboards, progress analytics, projects, assessments, and certificates.",
+                  title: "IT Training & Placement",
+                  body: "Role-based training paths, learner dashboards, practical projects, assessments, interview preparation, and placement support.",
                 },
                 {
                   title: "Digital Marketing Engines",
                   body: "SEO, content, paid campaigns, CRM-ready forms, dynamic CTAs, attribution, and campaign dashboards.",
                 },
                 {
-                  title: "IT Modernization",
-                  body: "Application delivery, cloud foundations, data pipelines, automation, AI-ready operations, and security controls.",
+                  title: "IT Staffing",
+                  body: "Contract, contract-to-hire, permanent recruitment, technical screening, onboarding, and workforce visibility.",
                 },
                 {
-                  title: "Flexible Staffing",
-                  body: "Temporary, contract-to-hire, permanent recruitment, screening, onboarding, and workforce visibility.",
+                  title: "IT Product Development",
+                  body: "Discovery, UX, web applications, portals, APIs, dashboards, QA, deployment, and post-launch improvements.",
                 },
                 {
                   title: "Trust and Proof",
@@ -152,7 +152,7 @@ const ServicesPage = () => {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/courses" className="pill-link">
-              Explore courses
+              Explore training
             </Link>
             <Link to="/auth" className="pill-link">
               Learner Portal

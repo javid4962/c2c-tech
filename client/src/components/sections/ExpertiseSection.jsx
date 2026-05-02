@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getIcon } from "../../utils/icons";
+import featurePreview from "../../assets/illustrations/feature-preview.svg";
 
 const ExpertiseCard = ({ service, index }) => {
   const Icon = getIcon(service.icon);
@@ -32,13 +33,13 @@ const ExpertiseSection = ({ services = [], featureImage }) => {
       <div className="page-shell">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#5a74a6]">AI-Powered Expertise</p>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#0f766e]">Service Expertise</p>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-midnight">
-              Turning Modernization into Measurable Impact
+              Turning training, marketing, staffing, and product ideas into measurable progress.
             </h2>
           </div>
           <Link to="/services" className="primary-pill">
-            Explore Capabilities
+            Explore Our Services
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -58,13 +59,14 @@ const ExpertiseSection = ({ services = [], featureImage }) => {
             className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-panel"
           >
             <img
-              src={
-                featureImage ||
-                "https://images.unsplash.com/photo-1516321310764-8d45b91374f3?auto=format&fit=crop&w=1200&q=80"
-              }
-              alt="Enterprise technology collaboration"
-              className="h-[430px] w-full object-cover"
+              src={featureImage || featurePreview}
+              alt="C2C service delivery preview"
+              className="h-[430px] w-full bg-[#f7f9fd] object-cover"
               loading="lazy"
+              onError={(event) => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = featurePreview;
+              }}
             />
           </motion.div>
 

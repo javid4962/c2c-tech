@@ -162,7 +162,7 @@ Action: Rewrite
 After the frontend deploys, copy the frontend URL and update the backend `CLIENT_URL` variable:
 
 ```env
-CLIENT_URL=https://your-frontend-name.onrender.com
+CLIENT_URL=https://c2c-tech-solutions.onrender.com
 ```
 
 If you use multiple frontend URLs, separate them with commas:

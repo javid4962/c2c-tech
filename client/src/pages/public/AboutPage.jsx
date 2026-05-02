@@ -18,10 +18,10 @@ const AboutPage = () => {
         <div className="page-shell space-y-12">
           <SectionHeading
             eyebrow="About"
-            title="A premium partner across EduTech, digital marketing, IT services, and staffing."
+            title="About Us: a practical partner for IT training, marketing, staffing, and product development."
             description={
               settings?.about?.overview ||
-              `${companyName} designs learning platforms, marketing systems, IT delivery programs, and staffing solutions that help teams move with more confidence.`
+              `${companyName} builds job-ready training programs, digital marketing systems, IT staffing pipelines, and product development teams that help organizations move with more confidence.`
             }
           />
 
@@ -30,19 +30,19 @@ const AboutPage = () => {
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">How we work</p>
                 <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-midnight">
-                  Learning, marketing, technology, and talent built into one polished operating model.
+                  Training, marketing, staffing, and product delivery built into one polished operating model.
                 </h2>
                 <p className="mt-5 text-base leading-8 text-slate-600">
-                  Modern organizations need more than isolated vendors. They need a partner that can shape learner
-                  journeys, generate qualified demand, modernize IT systems, staff the work, and keep performance
+                  Modern organizations need more than isolated vendors. They need a partner that can train job-ready
+                  talent, generate qualified demand, staff technical roles, build reliable products, and keep performance
                   visible after launch.
                 </p>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {[
-                    { title: "EduTech journeys", body: "Course catalogs, dashboards, assessments, and certificates." },
+                    { title: "IT Training & Placement", body: "Role-based programs, live projects, interview support, and placement workflows." },
                     { title: "Marketing engines", body: "SEO, campaigns, content, automation, and conversion reporting." },
-                    { title: "IT services", body: "Applications, cloud, data, AI workflows, security, and support." },
-                    { title: "Staffing with context", body: "Flexible hiring models aligned to roles, fit, and ramp speed." },
+                    { title: "IT staffing", body: "Flexible hiring models aligned to technical roles, fit, and ramp speed." },
+                    { title: "IT product development", body: "Web apps, portals, APIs, dashboards, integrations, QA, and support." },
                   ].map((item) => (
                     <div key={item.title} className="rounded-[18px] border border-slate-200 bg-[#f7f9fd] p-5 shadow-panel">
                       <p className="text-sm font-bold text-midnight">{item.title}</p>

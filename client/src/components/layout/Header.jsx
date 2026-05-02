@@ -1,19 +1,21 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useSite } from "../../context/SiteContext";
 import BrandMark from "../common/BrandMark";
 
+const serviceItems = [
+  { label: "IT Training & Placement", href: "/services/it-training-placement" },
+  { label: "Digital Marketing", href: "/services/digital-marketing" },
+  { label: "IT Staffing", href: "/services/it-staffing" },
+  { label: "IT Product Development", href: "/services/it-product-development" },
+];
+
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Courses", href: "/courses" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Insights", href: "/blog" },
-  { label: "Careers", href: "/careers" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us", href: "/about" },
+  { label: "Our Approach", href: "/#our-approach" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const Header = () => {
@@ -23,7 +25,13 @@ const Header = () => {
 
   useEffect(() => {
     setMenuOpen(false);
-  }, [location.pathname]);
+
+    if (location.hash) {
+      window.requestAnimationFrame(() => {
+        document.querySelector(location.hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }, [location.pathname, location.hash]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
@@ -34,7 +42,43 @@ const Header = () => {
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
-            {navItems.map((item) => (
+            <NavLink
+              to={navItems[0].href}
+              className={({ isActive }) =>
+                `text-sm font-semibold ${isActive ? "text-slateblue" : "text-midnight hover:text-slateblue"}`
+              }
+            >
+              {navItems[0].label}
+            </NavLink>
+
+            <div className="group relative">
+              <NavLink
+                to="/services"
+                className={() =>
+                  `inline-flex items-center gap-1.5 text-sm font-semibold ${
+                    location.pathname.startsWith("/services") ? "text-slateblue" : "text-midnight hover:text-slateblue"
+                  }`
+                }
+              >
+                Our Services
+                <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
+              </NavLink>
+              <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-4 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="rounded-[18px] border border-slate-200 bg-white p-2 shadow-panel">
+                  {serviceItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      to={item.href}
+                      className="block rounded-[14px] px-4 py-3 text-sm font-semibold text-midnight hover:bg-mist hover:text-slateblue"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {navItems.slice(1).map((item) => (
               <NavLink
                 key={item.href}
                 to={item.href}
@@ -76,7 +120,33 @@ const Header = () => {
             className="border-t border-slate-200 bg-white/95 backdrop-blur-xl lg:hidden"
           >
             <div className="page-shell flex flex-col gap-3 py-5">
-              {navItems.map((item) => (
+              <Link
+                to={navItems[0].href}
+                onClick={() => setMenuOpen(false)}
+                className="rounded-2xl px-3 py-2 text-sm font-semibold text-midnight hover:bg-[#f4f7fb] hover:text-slateblue"
+              >
+                {navItems[0].label}
+              </Link>
+              <Link
+                to="/services"
+                onClick={() => setMenuOpen(false)}
+                className="rounded-2xl px-3 py-2 text-sm font-semibold text-midnight hover:bg-[#f4f7fb] hover:text-slateblue"
+              >
+                Our Services
+              </Link>
+              <div className="grid gap-2 border-l border-slate-200 pl-4">
+                {serviceItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="rounded-xl px-3 py-2 text-sm font-semibold text-slate-600 hover:bg-[#f4f7fb] hover:text-slateblue"
+                  >
+                    {item.label}
+                  </Link>
+                  ))}
+              </div>
+              {navItems.slice(1).map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}

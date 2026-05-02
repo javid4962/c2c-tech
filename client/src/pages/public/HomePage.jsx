@@ -36,10 +36,10 @@ const HomePage = () => {
   return (
     <>
       <SEO
-        title={`${settings?.companyName} | EduTech, Digital Marketing, IT Services & Staffing`}
+        title={`${settings?.companyName} | IT Training, Digital Marketing, IT Staffing & Product Development`}
         description={
           settings?.hero?.subtext ||
-          `${settings?.companyName} helps teams launch EduTech programs, digital marketing engines, IT services, and staffing solutions.`
+          `${settings?.companyName} helps teams launch IT training and placement programs, digital marketing engines, IT staffing solutions, and product development programs.`
         }
       />
       <HeroSection />

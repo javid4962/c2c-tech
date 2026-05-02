@@ -1,0 +1,16 @@
+
+> c2c-tech-client@1.0.0 dev
+> vite --host 127.0.0.1 --port 5174
+
+
+  [32m[1mVITE[22m v6.4.2[39m  [2mready in [0m[1m685[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5174[22m/[39m
+[2m10:48:33 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Header.jsx, /src/index.css[22m
+[2m10:48:46 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Header.jsx, /src/index.css[22m
+[2m10:48:54 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Footer.jsx, /src/index.css[22m
+[2m10:49:04 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/sections/RoadmapSection.jsx[22m
+[2m10:52:21 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Footer.jsx, /src/index.css[22m
+[2m11:01:08 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/sections/ImpactSection.jsx[22m
+[2m11:01:44 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/sections/RoadmapSection.jsx[22m
+[2m11:05:36 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/ExpertiseSection.jsx, /src/index.css[22m

@@ -24,8 +24,13 @@ if (!process.argv.includes("--yes")) {
 
 const legacyTitles = {
   services: [
+    "IT Training & Placement",
+    "IT Staffing",
+    "IT Product Development",
+    "EduTech Solutions",
     "IT Services",
     "Digital Marketing",
+    "Staffing Solutions",
     "Staffing (IT/Non-IT)",
     "IT Trainings",
     "Platform Engineering",

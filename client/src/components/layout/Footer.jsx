@@ -9,14 +9,18 @@ const Footer = () => {
   const PhoneIcon = getIcon("Phone");
   const MapIcon = getIcon("MapPinned");
   const industryLinks = (settings?.industries || []).slice(0, 4);
-  const quickLinks = settings?.footer?.quickLinks || [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Contact", href: "/contact" },
-    { label: "Learner Portal", href: "/auth" },
+  const quickLinks = [
+    { label: "About Us", href: "/about" },
+    { label: "Our Services", href: "/services" },
+    { label: "Our Approach", href: "/#our-approach" },
+    { label: "Contact Us", href: "/contact" },
   ];
-  const serviceLinks = settings?.footer?.serviceLinks || [];
+  const serviceLinks = [
+    { label: "IT Training & Placement", href: "/services/it-training-placement" },
+    { label: "Digital Marketing", href: "/services/digital-marketing" },
+    { label: "IT Staffing", href: "/services/it-staffing" },
+    { label: "IT Product Development", href: "/services/it-product-development" },
+  ];
 
   return (
     <footer className="border-t border-white/10 bg-[#081630] text-white">

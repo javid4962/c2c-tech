@@ -48,14 +48,14 @@ const ContactPage = () => {
     <>
       <SEO
         title={`Contact | ${settings?.companyName}`}
-        description="Reach out to discuss EduTech, digital marketing, IT services, staffing, or learning operations."
+        description="Reach out to discuss IT training and placement, digital marketing, IT staffing, or IT product development."
       />
       <section className="section-space">
         <div className="page-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="glass-panel p-8">
             <SectionHeading
               eyebrow="Contact"
-              title="Talk to us about your next EduTech, marketing, IT, or staffing goal."
+              title="Contact us about training, marketing, staffing, or product development."
               description="We typically respond within 1 business day. Share the goal, and our team will route the right specialist."
             />
 
@@ -76,10 +76,10 @@ const ContactPage = () => {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                { title: "EduTech", body: "Course catalogs, learner dashboards, assessments, certificates, and cohort operations." },
+                { title: "IT Training & Placement", body: "Training tracks, live projects, interview readiness, learner dashboards, and placement support." },
                 { title: "Digital Marketing", body: "SEO, content systems, paid campaigns, landing pages, and revenue dashboards." },
-                { title: "IT Services", body: "Applications, cloud, APIs, data, automation, security, and managed support." },
-                { title: "Staffing", body: "IT and non-IT talent, screening, onboarding, managed teams, and workforce reporting." },
+                { title: "IT Staffing", body: "Technical hiring, screening, onboarding, contract talent, managed teams, and workforce reporting." },
+                { title: "IT Product Development", body: "Web apps, portals, APIs, dashboards, integrations, QA, deployment, and support." },
               ].map((item) => (
                 <div key={item.title} className="rounded-[18px] border border-slate-200 bg-[#f7f9fd] p-5 shadow-panel">
                   <p className="text-sm font-bold text-midnight">{item.title}</p>
