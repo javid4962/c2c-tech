@@ -39,6 +39,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use("/uploads", express.static(path.resolve(__dirname, "../uploads")));
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "C2C Tech API is running",
+    apiBase: "/api",
+    health: "/api/health",
+  });
+});
+
 app.get("/api/health", (req, res) => {
   res.json({ success: true, message: "API is running" });
 });
@@ -64,4 +73,3 @@ app.use(notFound);
 app.use(errorHandler);
 
 export default app;
-

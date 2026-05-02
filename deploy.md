@@ -108,6 +108,12 @@ Expected response:
 }
 ```
 
+The base backend URL also returns a clean API status:
+
+```text
+https://your-api-name.onrender.com/
+```
+
 If you already created the service and it failed with `npm error Missing script: "build"`, open the Render service settings and change:
 
 ```text
