@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-midnight antialiased;
+  background-image:
+    radial-gradient(circle at 8% 0%, rgba(15, 118, 110, 0.08), transparent 28rem),
+    radial-gradient(circle at 92% 6%, rgba(255, 138, 91, 0.08), transparent 24rem),
+    linear-gradient(180deg, #ffffff 0%, #f7f9fc 48%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+a,
+button {
+  text-rendering: geometricPrecision;
+}
+
+/* Smooth, professional feel across UI interactions */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+.elevate-hover {
+  @apply transition duration-300 ease-out;
+}
+
+.elevate-hover:hover {
+  transform: translateY(-2px);
+}
+
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-4 focus-visible:ring-slateblue/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  @apply mx-auto w-full max-w-[1360px] px-4 sm:px-6 lg:px-8;
+}
+
+.glass-panel {
+  @apply rounded-[22px] border border-slate-200/75 bg-white/95 shadow-panel;
+  box-shadow: 0 22px 55px rgba(7, 23, 49, 0.1);
+}
+
+.glass-panel.strong {
+  @apply border-slate-200 bg-white;
+}
+
+.section-space {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.noise-surface {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(15, 118, 110, 0.12), transparent 24%),
+    radial-gradient(circle at 84% 10%, rgba(255, 138, 91, 0.12), transparent 24%),
+    linear-gradient(180deg, #fbfcfe, #ffffff);
+}
+
+.navy-surface {
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(101, 214, 197, 0.18), transparent 30%),
+    radial-gradient(circle at 100% 0%, rgba(255, 138, 91, 0.18), transparent 28%),
+    linear-gradient(135deg, #050910 0%, #0b1727 52%, #10263b 100%);
+}
+
+.dot-matrix {
+  background-image: radial-gradient(circle, rgba(82, 169, 255, 0.35) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.hero-dot-wave {
+  background-image: radial-gradient(circle, rgba(18, 56, 111, 0.28) 1.1px, transparent 1.2px);
+  background-size: 14px 14px;
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.25) 16%, black 45%, black 82%, transparent 100%);
+}
+
+.orb-ring {
+  box-shadow:
+    0 0 0 1px rgba(29, 72, 140, 0.08),
+    0 0 0 18px rgba(83, 125, 191, 0.08),
+    0 0 0 36px rgba(83, 125, 191, 0.06),
+    0 0 0 56px rgba(83, 125, 191, 0.04),
+    0 20px 80px rgba(31, 59, 115, 0.18);
+}
+
+.wordmark-slant {
+  transform: skewX(-12deg);
+  transform-origin: center;
+}
+
+.pill-link {
+  @apply inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-midnight transition hover:border-slateblue hover:text-slateblue;
+}
+
+.primary-pill {
+  @apply inline-flex items-center gap-2 rounded-full bg-midnight px-5 py-3 text-sm font-semibold text-white transition hover:bg-slateblue;
+}
+
+.primary-pill:hover {
+  background-color: #0f766e;
+}
+
+.pill-link:hover {
+  border-color: #0f766e;
+  color: #0f766e;
+}
+
+.richtext p,
+.richtext ul,
+.richtext ol,
+.richtext h2,
+.richtext h3,
+.richtext blockquote {
+  @apply mb-4;
+}
+
+.richtext ul {
+  @apply list-disc pl-6;
+}
+
+.richtext ol {
+  @apply list-decimal pl-6;
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  @apply border-slate-200;
+}
+
+.ql-editor {
+  min-height: 180px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(19, 51, 95, 0.22);
+  border-radius: 999px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shimmer {
+  background-image: linear-gradient(90deg, rgba(148, 163, 184, 0.14), rgba(148, 163, 184, 0.32), rgba(148, 163, 184, 0.14));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.skeleton-block {
+  @apply rounded-2xl bg-slate-200/40;
+}
